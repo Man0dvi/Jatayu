@@ -1,0 +1,62 @@
+[
+  {
+    "question": "```python [ \\\"Which of the following is NOT a common technique used in text preprocessing?",
+    "options": [
+      "Tokenization",
+      "Part-of-speech tagging",
+      "Stop word removal",
+      "Stemming"
+    ],
+    "answer": "Part-of-speech tagging"
+  },
+  {
+    "question": ",   \"\\\"What is the primary purpose of tokenization in NLP?",
+    "options": [
+      "To remove irrelevant words from the text.",
+      "To convert text into a sequence of individual units.",
+      "To reduce words to their root form.",
+      "To correct spelling errors in the text."
+    ],
+    "answer": "To convert text into a sequence of individual units."
+  },
+  {
+    "question": ",   \"\\\"Which of the following is a common library used for NLP tasks in Python?",
+    "options": [
+      "TensorFlow",
+      "PyTorch",
+      "NLTK",
+      "Pandas"
+    ],
+    "answer": "NLTK"
+  },
+  {
+    "question": ",   \"\\\"What is the purpose of stop word removal in text preprocessing?",
+    "options": [
+      "To reduce words to their root form.",
+      "To remove common words that don't contribute much to the meaning.",
+      "To split text into individual words.",
+      "To correct grammatical errors."
+    ],
+    "answer": "To remove common words that don't contribute much to the meaning."
+  },
+  {
+    "question": ",   \"\\\"What is the difference between stemming and lemmatization?",
+    "options": [
+      "Stemming produces the dictionary form of a word, while lemmatization produces a truncated form.",
+      "Stemming is faster but less accurate than lemmatization.",
+      "Stemming is more accurate but slower than lemmatization.",
+      "Stemming and lemmatization are the same thing."
+    ],
+    "answer": "Stemming is faster but less accurate than lemmatization."
+  },
+  {
+    "question": ",   \"\\\"Which of the following words would be considered a stop word?",
+    "options": [
+      "Algorithm",
+      "Natural",
+      "The",
+      "Processing"
+    ],
+    "answer": "The"
+  }
+]

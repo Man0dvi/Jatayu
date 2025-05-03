@@ -1,0 +1,62 @@
+[
+  {
+    "question": "```python [ \\\"Which cloud service model offers the highest level of control to the user, allowing them to manage the operating system, storage, and deployed applications?",
+    "options": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "FaaS"
+    ],
+    "answer": "IaaS"
+  },
+  {
+    "question": ",   \"\\\"A company wants to deploy a custom e-commerce application without managing the underlying infrastructure. Which cloud service model is most suitable?",
+    "options": [
+      "IaaS",
+      "SaaS",
+      "PaaS",
+      "DaaS"
+    ],
+    "answer": "PaaS"
+  },
+  {
+    "question": ",   \"\\\"In a SaaS model, which of the following is primarily the responsibility of the cloud provider?",
+    "options": [
+      "Securing the application code",
+      "Managing the operating system",
+      "Configuring the network firewall",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": ",   \"\\\"Which cloud service model is best suited for providing end-users with ready-to-use applications over the internet?",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "CaaS"
+    ],
+    "answer": "SaaS"
+  },
+  {
+    "question": ",   \"\\\"A development team needs a platform to build, test, and deploy applications without worrying about server maintenance. Which cloud service model should they choose?",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "DBaaS"
+    ],
+    "answer": "PaaS"
+  },
+  {
+    "question": ",   \"\\\"In an IaaS environment, what is the user primarily responsible for managing?",
+    "options": [
+      "The physical hardware",
+      "The operating system and applications",
+      "The network infrastructure",
+      "The virtualization layer"
+    ],
+    "answer": "The operating system and applications"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "question": "```python [ \\\"Which of the following tokenization methods is most suitable for handling contractions like 'can't' and 'won't'?",
+    "options": [
+      "Whitespace tokenization",
+      "WordPunctTokenizer",
+      "TreebankWordTokenizer",
+      "Character-based tokenization"
+    ],
+    "answer": "TreebankWordTokenizer"
+  },
+  {
+    "question": ",   \"\\\"What is the primary purpose of stop word removal in NLP?",
+    "options": [
+      "To improve the accuracy of part-of-speech tagging",
+      "To reduce the dimensionality of the feature space and improve efficiency",
+      "To enhance the readability of the text for human understanding",
+      "To correct spelling errors in the text"
+    ],
+    "answer": "To reduce the dimensionality of the feature space and improve efficiency"
+  },
+  {
+    "question": ",   \"\\\"Which of the following is a key difference between stemming and lemmatization?",
+    "options": [
+      "Stemming produces a valid word, while lemmatization produces a root form.",
+      "Stemming is context-dependent, while lemmatization is context-independent.",
+      "Stemming is generally faster but less accurate than lemmatization.",
+      "Stemming requires a dictionary, while lemmatization does not."
+    ],
+    "answer": "Stemming is generally faster but less accurate than lemmatization."
+  },
+  {
+    "question": ",   \"\\\"Which of the following scenarios would benefit most from using a custom stop word list?",
+    "options": [
+      "Sentiment analysis of general news articles",
+      "Topic modeling of scientific publications in a specific domain",
+      "Machine translation of common phrases",
+      "Text summarization of legal documents"
+    ],
+    "answer": "Topic modeling of scientific publications in a specific domain"
+  },
+  {
+    "question": ",   \"\\\"Which tokenization technique is most appropriate for languages like Chinese or Japanese that do not use spaces between words?",
+    "options": [
+      "Whitespace tokenization",
+      "Subword tokenization",
+      "Rule-based tokenization",
+      "Character-based tokenization"
+    ],
+    "answer": "Subword tokenization"
+  },
+  {
+    "question": ",   \"\\\"What is the potential drawback of aggressive stemming?",
+    "options": [
+      "It can lead to an increase in the vocabulary size.",
+      "It can result in the loss of important semantic information.",
+      "It can slow down the text processing pipeline.",
+      "It can fail to remove common suffixes."
+    ],
+    "answer": "It can result in the loss of important semantic information."
+  }
+]

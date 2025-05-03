@@ -1,0 +1,62 @@
+[
+  {
+    "question": "```python [ \\\"What is the primary goal of text preprocessing in NLP?",
+    "options": [
+      "To complicate the text for better security",
+      "To transform text into a more suitable form for analysis",
+      "To add irrelevant information to the text",
+      "To make the text longer"
+    ],
+    "answer": "To transform text into a more suitable form for analysis"
+  },
+  {
+    "question": ",   \"\\\"Which of the following is NOT a common text preprocessing technique?",
+    "options": [
+      "Tokenization",
+      "Stop word removal",
+      "Sentiment analysis",
+      "Stemming"
+    ],
+    "answer": "Sentiment analysis"
+  },
+  {
+    "question": ",   \"\\\"What is the purpose of tokenization in NLP?",
+    "options": [
+      "To remove punctuation from the text",
+      "To divide text into individual units",
+      "To convert text to uppercase",
+      "To combine multiple sentences into one"
+    ],
+    "answer": "To divide text into individual units"
+  },
+  {
+    "question": ",   \"\\\"What are 'stop words' in the context of NLP?",
+    "options": [
+      "Words that are essential for understanding the text",
+      "Common words that are often removed during preprocessing",
+      "Words that indicate the end of a sentence",
+      "Words that are always capitalized"
+    ],
+    "answer": "Common words that are often removed during preprocessing"
+  },
+  {
+    "question": ",   \"\\\"Which of the following is a common example of a stop word?",
+    "options": [
+      "'Algorithm'",
+      "'The'",
+      "'Data'",
+      "'Analysis'"
+    ],
+    "answer": "'The'"
+  },
+  {
+    "question": ",   \"\\\"What is the main difference between stemming and lemmatization?",
+    "options": [
+      "Stemming produces real words, while lemmatization does not",
+      "Lemmatization produces real words, while stemming does not",
+      "Stemming is more accurate than lemmatization",
+      "Lemmatization is faster than stemming"
+    ],
+    "answer": "Lemmatization produces real words, while stemming does not"
+  }
+]

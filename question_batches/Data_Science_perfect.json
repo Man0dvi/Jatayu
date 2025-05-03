@@ -1,0 +1,62 @@
+[
+  {
+    "question": "```python [ \\\"Which of the following is NOT a common metric for evaluating the performance of a clustering algorithm?",
+    "options": [
+      "Silhouette Score",
+      "Davies-Bouldin Index",
+      "Adjusted Rand Index",
+      "Root Mean Squared Error"
+    ],
+    "answer": "Root Mean Squared Error"
+  },
+  {
+    "question": ",   \"\\\"In a high-dimensional dataset, which regularization technique is most likely to perform feature selection by driving some coefficients to exactly zero?",
+    "options": [
+      "L2 Regularization",
+      "L1 Regularization",
+      "Elastic Net Regularization",
+      "Early Stopping"
+    ],
+    "answer": "L1 Regularization"
+  },
+  {
+    "question": ",   \"\\\"You are building a model to predict customer churn. You have a highly imbalanced dataset with significantly more non-churned customers than churned customers. Which evaluation metric is most appropriate to use?",
+    "options": [
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "F1-score"
+    ],
+    "answer": "F1-score"
+  },
+  {
+    "question": ",   \"\\\"Which of the following statements best describes the bias-variance tradeoff?",
+    "options": [
+      "Increasing model complexity always reduces both bias and variance.",
+      "Decreasing model complexity always increases both bias and variance.",
+      "Increasing model complexity typically reduces bias but increases variance.",
+      "Decreasing model complexity typically reduces bias but increases variance."
+    ],
+    "answer": "Increasing model complexity typically reduces bias but increases variance."
+  },
+  {
+    "question": ",   \"\\\"Which of the following algorithms is most suitable for identifying groups of customers with similar purchasing behavior without any prior knowledge of the groups?",
+    "options": [
+      "Linear Regression",
+      "Logistic Regression",
+      "K-Means Clustering",
+      "Support Vector Machine"
+    ],
+    "answer": "K-Means Clustering"
+  },
+  {
+    "question": ",   \"\\\"What is the primary purpose of cross-validation in machine learning?",
+    "options": [
+      "To reduce the training time of the model.",
+      "To estimate the generalization performance of the model on unseen data.",
+      "To increase the model's complexity.",
+      "To prevent overfitting on the training data."
+    ],
+    "answer": "To estimate the generalization performance of the model on unseen data."
+  }
+]

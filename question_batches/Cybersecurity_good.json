@@ -1,0 +1,92 @@
+[
+  {
+    "question": "```python [     \\\"What is the primary purpose of a firewall?",
+    "options": [
+      "To encrypt data",
+      "To control network access",
+      "To scan for viruses",
+      "To manage user accounts"
+    ],
+    "answer": "To control network access"
+  },
+  {
+    "question": "Which of the following is NOT a function of an Intrusion Detection System (IDS)?",
+    "options": [
+      "Monitoring network traffic",
+      "Blocking malicious activity",
+      "Alerting administrators of suspicious events",
+      "Logging network activity"
+    ],
+    "answer": "Blocking malicious activity"
+  },
+  {
+    "question": "What does TCP stand for?",
+    "options": [
+      "Transmission Control Protocol",
+      "Transfer Control Program",
+      "Total Communication Protocol",
+      "Transport Communication Process"
+    ],
+    "answer": "Transmission Control Protocol"
+  },
+  {
+    "question": "Which tool is commonly used for packet analysis?",
+    "options": [
+      "Nmap",
+      "Wireshark",
+      "Metasploit",
+      "Nessus"
+    ],
+    "answer": "Wireshark"
+  },
+  {
+    "question": "What is the default port for HTTP?",
+    "options": [
+      "21",
+      "22",
+      "80",
+      "443"
+    ],
+    "answer": "80"
+  },
+  {
+    "question": "What is the purpose of an IPS (Intrusion Prevention System)?",
+    "options": [
+      "To only detect intrusions",
+      "To prevent and detect intrusions",
+      "To only prevent intrusions on the endpoint",
+      "To log all network traffic"
+    ],
+    "answer": "To prevent and detect intrusions"
+  },
+  {
+    "question": "Which layer of the TCP/IP model is responsible for routing packets across networks?",
+    "options": [
+      "Application Layer",
+      "Transport Layer",
+      "Network Layer",
+      "Data Link Layer"
+    ],
+    "answer": "Network Layer"
+  },
+  {
+    "question": "What is a common type of firewall rule?",
+    "options": [
+      "Allow all traffic",
+      "Deny all traffic",
+      "Allow specific traffic based on source/destination",
+      "Only allow traffic on port 80"
+    ],
+    "answer": "Allow specific traffic based on source/destination"
+  },
+  {
+    "question": "What is a 'false positive' in the context of cybersecurity?",
+    "options": [
+      "A real threat that is missed",
+      "A legitimate activity flagged as malicious",
+      "A vulnerability in a system",
+      "A successful attack"
+    ],
+    "answer": "A legitimate activity flagged as malicious"
+  }
+]

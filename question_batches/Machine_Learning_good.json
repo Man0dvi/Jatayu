@@ -1,0 +1,62 @@
+[
+  {
+    "question": "```python [ \\\"Which of the following algorithms is used for classification tasks?",
+    "options": [
+      "Linear Regression",
+      "Polynomial Regression",
+      "Logistic Regression",
+      "Simple Linear Regression"
+    ],
+    "answer": "Logistic Regression"
+  },
+  {
+    "question": ",   \"\\\"What does RMSE stand for?",
+    "options": [
+      "Root Mean Squared Error",
+      "Relative Mean Squared Error",
+      "Regularized Mean Squared Error",
+      "Reduced Mean Squared Error"
+    ],
+    "answer": "Root Mean Squared Error"
+  },
+  {
+    "question": ",   \"\\\"Which evaluation metric is most suitable when you want to minimize false negatives?",
+    "options": [
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "F1-score"
+    ],
+    "answer": "Recall"
+  },
+  {
+    "question": ",   \"\\\"Which algorithm is known for creating multiple decision trees?",
+    "options": [
+      "Support Vector Machine",
+      "Logistic Regression",
+      "Decision Tree",
+      "Random Forest"
+    ],
+    "answer": "Random Forest"
+  },
+  {
+    "question": ",   \"\\\"What type of problem is predicting house prices?",
+    "options": [
+      "Classification",
+      "Regression",
+      "Clustering",
+      "Dimensionality Reduction"
+    ],
+    "answer": "Regression"
+  },
+  {
+    "question": ",   \"\\\"Which of the following is a linear model?",
+    "options": [
+      "Decision Tree",
+      "Random Forest",
+      "Linear Regression",
+      "Support Vector Machine with RBF kernel"
+    ],
+    "answer": "Linear Regression"
+  }
+]

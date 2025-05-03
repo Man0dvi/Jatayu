@@ -1,0 +1,62 @@
+[
+  {
+    "question": "```python [ \\\"Which of the following is most susceptible to overfitting when dealing with high-dimensional data?",
+    "options": [
+      "Linear Regression",
+      "Logistic Regression",
+      "Decision Tree",
+      "Random Forest"
+    ],
+    "answer": "Decision Tree"
+  },
+  {
+    "question": ",   \"\\\"In a binary classification problem with a highly imbalanced dataset (e.g., 99% negative, 1% positive), which metric is generally the most informative for evaluating model performance?",
+    "options": [
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "F1-score"
+    ],
+    "answer": "F1-score"
+  },
+  {
+    "question": ",   \"\\\"Which of the following algorithms is most sensitive to outliers in the data?",
+    "options": [
+      "Random Forest",
+      "Support Vector Machine",
+      "Linear Regression",
+      "Decision Tree"
+    ],
+    "answer": "Linear Regression"
+  },
+  {
+    "question": ",   \"\\\"What is the primary difference between L1 and L2 regularization in the context of linear regression?",
+    "options": [
+      "L1 regularization encourages smaller weights, while L2 encourages sparsity.",
+      "L1 regularization encourages sparsity, while L2 encourages smaller weights.",
+      "L1 regularization is used for classification, while L2 is used for regression.",
+      "L1 regularization is less computationally expensive than L2."
+    ],
+    "answer": "L1 regularization encourages sparsity, while L2 encourages smaller weights."
+  },
+  {
+    "question": ",   \"\\\"Which of the following is NOT a method for handling multicollinearity in linear regression?",
+    "options": [
+      "Removing one of the correlated variables",
+      "Using Principal Component Analysis",
+      "Increasing the sample size",
+      "Applying polynomial features"
+    ],
+    "answer": "Applying polynomial features"
+  },
+  {
+    "question": ",   \"\\\"What is the effect of increasing the 'C' parameter in a Support Vector Machine (SVM)?",
+    "options": [
+      "It increases the margin width and allows more misclassifications.",
+      "It decreases the margin width and allows fewer misclassifications.",
+      "It has no effect on the margin width.",
+      "It only affects the kernel function."
+    ],
+    "answer": "It decreases the margin width and allows fewer misclassifications."
+  }
+]

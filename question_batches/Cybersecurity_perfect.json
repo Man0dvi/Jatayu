@@ -1,0 +1,62 @@
+[
+  {
+    "question": "```python [ \\\"A firewall rule allows traffic from 192.168.1.0/24 to any destination on port 80. What is the most immediate security risk?",
+    "options": [
+      "Internal hosts can be easily identified.",
+      "Any host on the internal network can initiate HTTP connections to any external server.",
+      "External hosts can initiate HTTP connections to any internal server.",
+      "The firewall will be overloaded with connection attempts."
+    ],
+    "answer": "Any host on the internal network can initiate HTTP connections to any external server."
+  },
+  {
+    "question": ",   \"\\\"An IDS alerts on a signature matching a known malware family. What is the MOST important next step?",
+    "options": [
+      "Immediately block all traffic to and from the affected host.",
+      "Analyze the affected host to confirm the infection and scope of the compromise.",
+      "Update the IDS signature database.",
+      "Notify law enforcement."
+    ],
+    "answer": "Analyze the affected host to confirm the infection and scope of the compromise."
+  },
+  {
+    "question": ",   \"\\\"Which TCP flag combination indicates the end of a connection?",
+    "options": [
+      "SYN, ACK",
+      "FIN, ACK",
+      "RST, ACK",
+      "URG, PSH"
+    ],
+    "answer": "FIN, ACK"
+  },
+  {
+    "question": ",   \"\\\"You observe a large number of SYN packets originating from different source IPs to a single destination IP. What type of attack is MOST likely occurring?",
+    "options": [
+      "DNS Amplification Attack",
+      "Man-in-the-Middle Attack",
+      "SYN Flood Attack",
+      "Cross-Site Scripting"
+    ],
+    "answer": "SYN Flood Attack"
+  },
+  {
+    "question": ",   \"\\\"A firewall is configured with a default deny policy. Which of the following is true?",
+    "options": [
+      "All traffic is allowed unless explicitly blocked.",
+      "All traffic is blocked unless explicitly allowed.",
+      "Only traffic matching specific signatures is allowed.",
+      "Only traffic from trusted sources is allowed."
+    ],
+    "answer": "All traffic is blocked unless explicitly allowed."
+  },
+  {
+    "question": ",   \"\\\"What is the purpose of a DMZ (Demilitarized Zone)?",
+    "options": [
+      "To isolate the internal network from the internet.",
+      "To provide a secure location for sensitive data.",
+      "To host publicly accessible services while protecting the internal network.",
+      "To encrypt all network traffic."
+    ],
+    "answer": "To host publicly accessible services while protecting the internal network."
+  }
+]

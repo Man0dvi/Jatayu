@@ -1,0 +1,62 @@
+[
+  {
+    "question": "```python [ \\\"Which of the following is a supervised learning technique?",
+    "options": [
+      "K-Means Clustering",
+      "Principal Component Analysis",
+      "Linear Regression",
+      "Association Rule Mining"
+    ],
+    "answer": "Linear Regression"
+  },
+  {
+    "question": ",   \"\\\"What is the primary goal of regularization?",
+    "options": [
+      "To increase model complexity",
+      "To prevent overfitting",
+      "To improve data quality",
+      "To speed up training time"
+    ],
+    "answer": "To prevent overfitting"
+  },
+  {
+    "question": ",   \"\\\"Which metric is most suitable for evaluating a binary classification model when the classes are imbalanced?",
+    "options": [
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "F1-score"
+    ],
+    "answer": "F1-score"
+  },
+  {
+    "question": ",   \"\\\"What type of problem is predicting the price of a house?",
+    "options": [
+      "Classification",
+      "Clustering",
+      "Regression",
+      "Dimensionality Reduction"
+    ],
+    "answer": "Regression"
+  },
+  {
+    "question": ",   \"\\\"Which of the following is an unsupervised learning technique?",
+    "options": [
+      "Support Vector Machine",
+      "Decision Tree",
+      "K-Nearest Neighbors",
+      "K-Means Clustering"
+    ],
+    "answer": "K-Means Clustering"
+  },
+  {
+    "question": ",   \"\\\"What does L1 regularization primarily do?",
+    "options": [
+      "Shrinks coefficients towards zero, potentially setting some to zero",
+      "Increases the learning rate",
+      "Adds more features to the model",
+      "Prevents underfitting"
+    ],
+    "answer": "Shrinks coefficients towards zero, potentially setting some to zero"
+  }
+]

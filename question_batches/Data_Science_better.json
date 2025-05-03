@@ -1,0 +1,92 @@
+[
+  {
+    "question": "```python [ \\\"Which of the following algorithms is most sensitive to outliers in the data?",
+    "options": [
+      "Support Vector Machine",
+      "Linear Regression",
+      "Random Forest",
+      "Decision Tree"
+    ],
+    "answer": "Linear Regression"
+  },
+  {
+    "question": "What is the primary goal of L1 regularization?",
+    "options": [
+      "To reduce the variance of the model",
+      "To reduce the bias of the model",
+      "To shrink less important feature coefficients to zero",
+      "To increase the model's complexity"
+    ],
+    "answer": "To shrink less important feature coefficients to zero"
+  },
+  {
+    "question": "Which evaluation metric is most appropriate for imbalanced classification problems?",
+    "options": [
+      "Accuracy",
+      "Precision",
+      "F1-score",
+      "Recall"
+    ],
+    "answer": "F1-score"
+  },
+  {
+    "question": "Which of the following is NOT a regression algorithm?",
+    "options": [
+      "Linear Regression",
+      "Logistic Regression",
+      "Support Vector Regression",
+      "Decision Tree Regression"
+    ],
+    "answer": "Logistic Regression"
+  },
+  {
+    "question": "What does a high bias and low variance model indicate?",
+    "options": [
+      "Overfitting",
+      "Underfitting",
+      "A perfect fit",
+      "A balanced model"
+    ],
+    "answer": "Underfitting"
+  },
+  {
+    "question": "Which clustering algorithm requires you to pre-define the number of clusters?",
+    "options": [
+      "DBSCAN",
+      "Hierarchical Clustering",
+      "K-Means",
+      "Mean Shift"
+    ],
+    "answer": "K-Means"
+  },
+  {
+    "question": "What is the purpose of cross-validation?",
+    "options": [
+      "To train the model on the entire dataset",
+      "To evaluate the model's performance on unseen data",
+      "To reduce the model's complexity",
+      "To increase the model's training speed"
+    ],
+    "answer": "To evaluate the model's performance on unseen data"
+  },
+  {
+    "question": "Which regularization technique adds a penalty proportional to the square of the magnitude of coefficients?",
+    "options": [
+      "L1 Regularization",
+      "L2 Regularization",
+      "Elastic Net Regularization",
+      "Ridge Regression"
+    ],
+    "answer": "L2 Regularization"
+  },
+  {
+    "question": "Which of the following is a disadvantage of using decision trees?",
+    "options": [
+      "They are easy to interpret",
+      "They can easily overfit the data",
+      "They can handle both categorical and numerical data",
+      "They require minimal data preprocessing"
+    ],
+    "answer": "They can easily overfit the data"
+  }
+]

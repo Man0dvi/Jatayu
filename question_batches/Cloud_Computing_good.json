@@ -1,0 +1,62 @@
+[
+  {
+    "question": "```python [ \\\"Which cloud service model provides the most control over the infrastructure?",
+    "options": [
+      "SaaS",
+      "IaaS",
+      "PaaS",
+      "DaaS"
+    ],
+    "answer": "IaaS"
+  },
+  {
+    "question": ",   \"\\\"In which cloud service model does the provider manage the operating system?",
+    "options": [
+      "IaaS",
+      "SaaS",
+      "On-Premise",
+      "PaaS"
+    ],
+    "answer": "PaaS"
+  },
+  {
+    "question": ",   \"\\\"Which cloud service model is best suited for delivering software applications over the internet?",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "FaaS"
+    ],
+    "answer": "SaaS"
+  },
+  {
+    "question": ",   \"\\\"Which of the following is a responsibility of the user in an IaaS model?",
+    "options": [
+      "Managing the physical servers",
+      "Managing the network infrastructure",
+      "Managing the operating system",
+      "Managing the data center"
+    ],
+    "answer": "Managing the operating system"
+  },
+  {
+    "question": ",   \"\\\"Which cloud service model provides a platform for developers to build and deploy applications?",
+    "options": [
+      "IaaS",
+      "SaaS",
+      "PaaS",
+      "CaaS"
+    ],
+    "answer": "PaaS"
+  },
+  {
+    "question": ",   \"\\\"In a SaaS model, who is responsible for application updates?",
+    "options": [
+      "The user",
+      "The provider",
+      "The network administrator",
+      "The database administrator"
+    ],
+    "answer": "The provider"
+  }
+]

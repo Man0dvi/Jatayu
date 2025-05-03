@@ -1,0 +1,62 @@
+[
+  {
+    "question": "```python [ \\\"Which of the following is NOT a primary function of a firewall?",
+    "options": [
+      "Packet filtering",
+      "Network Address Translation",
+      "Intrusion Detection",
+      "Application-level gateway"
+    ],
+    "answer": "Intrusion Detection"
+  },
+  {
+    "question": ",   \"\\\"What is the purpose of a SYN flood attack?",
+    "options": [
+      "To steal user credentials",
+      "To exhaust server resources by overwhelming it with connection requests",
+      "To inject malicious code into a web application",
+      "To bypass firewall rules"
+    ],
+    "answer": "To exhaust server resources by overwhelming it with connection requests"
+  },
+  {
+    "question": ",   \"\\\"In TCP/IP, what layer is responsible for providing reliable, ordered, and error-checked delivery of data between applications?",
+    "options": [
+      "Network Layer",
+      "Data Link Layer",
+      "Transport Layer",
+      "Application Layer"
+    ],
+    "answer": "Transport Layer"
+  },
+  {
+    "question": ",   \"\\\"Which Wireshark filter would you use to capture only HTTP traffic?",
+    "options": [
+      "ip.proto == http",
+      "tcp.port == 80",
+      "http.request",
+      "port 80"
+    ],
+    "answer": "tcp.port == 80"
+  },
+  {
+    "question": ",   \"\\\"What is the difference between an Intrusion Detection System (IDS) and an Intrusion Prevention System (IPS)?",
+    "options": [
+      "IDS actively blocks malicious traffic, while IPS only monitors and alerts.",
+      "IPS actively blocks malicious traffic, while IDS only monitors and alerts.",
+      "IDS operates at the network layer, while IPS operates at the application layer.",
+      "IPS is hardware-based, while IDS is software-based."
+    ],
+    "answer": "IPS actively blocks malicious traffic, while IDS only monitors and alerts."
+  },
+  {
+    "question": ",   \"\\\"Which firewall rule would block all incoming traffic on port 22?",
+    "options": [
+      "ALLOW TCP ANY ANY 22",
+      "DENY TCP ANY ANY 22",
+      "ALLOW ANY ANY TCP 22",
+      "DENY ANY ANY TCP 22"
+    ],
+    "answer": "DENY TCP ANY ANY 22"
+  }
+]

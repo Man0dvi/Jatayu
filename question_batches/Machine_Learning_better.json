@@ -1,0 +1,62 @@
+[
+  {
+    "question": "```python [ \\\"Which of the following algorithms is most sensitive to outliers in the data?",
+    "options": [
+      "Random Forest",
+      "Decision Tree",
+      "Linear Regression",
+      "Support Vector Machine"
+    ],
+    "answer": "Linear Regression"
+  },
+  {
+    "question": ",   \"\\\"In a binary classification problem, which metric is most suitable when you want to minimize false negatives?",
+    "options": [
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "F1-score"
+    ],
+    "answer": "Recall"
+  },
+  {
+    "question": ",   \"\\\"What is the primary difference between Linear Regression and Polynomial Regression?",
+    "options": [
+      "Linear Regression predicts categorical values, while Polynomial Regression predicts continuous values.",
+      "Linear Regression assumes a linear relationship, while Polynomial Regression can model non-linear relationships.",
+      "Linear Regression is used for classification, while Polynomial Regression is used for regression.",
+      "Linear Regression requires feature scaling, while Polynomial Regression does not."
+    ],
+    "answer": "Linear Regression assumes a linear relationship, while Polynomial Regression can model non-linear relationships."
+  },
+  {
+    "question": ",   \"\\\"Which of the following is NOT a method for evaluating the performance of a classification model?",
+    "options": [
+      "Confusion Matrix",
+      "AUC-ROC Curve",
+      "R-squared",
+      "F1-score"
+    ],
+    "answer": "R-squared"
+  },
+  {
+    "question": ",   \"\\\"What is the role of the kernel in Support Vector Machines (SVM)?",
+    "options": [
+      "To reduce the dimensionality of the data.",
+      "To map the data into a higher-dimensional space where it can be linearly separated.",
+      "To prevent overfitting by adding a penalty term.",
+      "To select the most important features."
+    ],
+    "answer": "To map the data into a higher-dimensional space where it can be linearly separated."
+  },
+  {
+    "question": ",   \"\\\"Which of the following is a disadvantage of using Decision Trees?",
+    "options": [
+      "They are computationally expensive to train.",
+      "They are difficult to interpret.",
+      "They are prone to overfitting.",
+      "They cannot handle missing values."
+    ],
+    "answer": "They are prone to overfitting."
+  }
+]

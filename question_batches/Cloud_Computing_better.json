@@ -1,0 +1,92 @@
+[
+  {
+    "question": "```python [ \\\"Which cloud service model provides the most control to the user over the underlying infrastructure?",
+    "options": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "FaaS"
+    ],
+    "answer": "IaaS"
+  },
+  {
+    "question": "A company wants to deploy a custom application without managing the underlying servers or operating systems. Which cloud service model is most suitable?",
+    "options": [
+      "IaaS",
+      "SaaS",
+      "PaaS",
+      "DaaS"
+    ],
+    "answer": "PaaS"
+  },
+  {
+    "question": "Which of the following is a typical example of a SaaS offering?",
+    "options": [
+      "Amazon EC2",
+      "Google App Engine",
+      "Salesforce",
+      "Microsoft Azure"
+    ],
+    "answer": "Salesforce"
+  },
+  {
+    "question": "In an IaaS model, which of the following responsibilities typically falls on the cloud provider?",
+    "options": [
+      "Application development",
+      "Operating system patching",
+      "Physical server maintenance",
+      "Data backup"
+    ],
+    "answer": "Physical server maintenance"
+  },
+  {
+    "question": "A development team needs a platform to build, test, and deploy applications without managing the infrastructure. Which service model best fits this requirement?",
+    "options": [
+      "IaaS",
+      "SaaS",
+      "PaaS",
+      "CaaS"
+    ],
+    "answer": "PaaS"
+  },
+  {
+    "question": "Which cloud service model offers the least amount of administrative overhead for the user?",
+    "options": [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "All have equal overhead"
+    ],
+    "answer": "SaaS"
+  },
+  {
+    "question": "A company wants to migrate its existing on-premises servers to the cloud. Which service model would be the most direct approach?",
+    "options": [
+      "SaaS",
+      "PaaS",
+      "IaaS",
+      "FaaS"
+    ],
+    "answer": "IaaS"
+  },
+  {
+    "question": "Which of the following is NOT a characteristic of SaaS?",
+    "options": [
+      "Accessed over the internet",
+      "Managed by the provider",
+      "Requires significant upfront investment",
+      "Typically subscription-based"
+    ],
+    "answer": "Requires significant upfront investment"
+  },
+  {
+    "question": "In a PaaS environment, what is the user primarily responsible for managing?",
+    "options": [
+      "Networking infrastructure",
+      "Operating system updates",
+      "Application code and data",
+      "Physical servers"
+    ],
+    "answer": "Application code and data"
+  }
+]
