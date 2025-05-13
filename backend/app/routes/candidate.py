@@ -14,6 +14,8 @@ from io import BytesIO
 from pdfminer.high_level import extract_text
 import json
 
+from app.models.assessment_registration import AssessmentRegistration
+
 candidate_api_bp = Blueprint('candidate_api', __name__, url_prefix='/api/candidate')
 
 # Configure logging
@@ -208,9 +210,9 @@ def infer_proficiency(skill, work_experience, education, projects):
         logger.debug(f"Final proficiency for '{skill}': Beginner (4) with score {score}")
     return proficiency
 
-@candidate_api_bp.route('/profile/<int:candidate_id>', methods=['GET'])
-def get_profile(candidate_id):
-    candidate = Candidate.query.get_or_404(candidate_id)
+@candidate_api_bp.route('/profile/<int:user_id>', methods=['GET'])
+def get_profile_by_user(user_id):
+    candidate = Candidate.query.filter_by(user_id=user_id).first_or_404()
     return jsonify({
         'candidate_id': candidate.candidate_id,
         'name': candidate.name,
@@ -226,9 +228,9 @@ def get_profile(candidate_id):
         'is_profile_complete': candidate.is_profile_complete
     })
 
-@candidate_api_bp.route('/profile/<int:candidate_id>', methods=['POST'])
-def update_profile(candidate_id):
-    candidate = Candidate.query.get_or_404(candidate_id)
+@candidate_api_bp.route('/profile/<int:user_id>', methods=['POST'])
+def update_profile(user_id):
+    candidate = Candidate.query.get_or_404(user_id)
 
     try:
         # Handle form data
@@ -245,7 +247,7 @@ def update_profile(candidate_id):
         profile_pic_file = request.files.get('profile_picture')
         
         if resume_file:
-            resume_filename = f"resumes/{candidate_id}_{resume_file.filename}"
+            resume_filename = f"resumes/{user_id}_{resume_file.filename}"
             resume_path = os.path.join('app/static/uploads', resume_filename)
             resume_file.save(resume_path)
             candidate.resume = resume_filename
@@ -292,7 +294,7 @@ def update_profile(candidate_id):
 
                 # Check if the candidate already has this skill
                 existing_skill = CandidateSkill.query.filter_by(
-                    candidate_id=candidate_id,
+                    candidate_id=candidate.candidate_id,
                     skill_id=skill.skill_id
                 ).first()
 
@@ -302,14 +304,14 @@ def update_profile(candidate_id):
                 else:
                     # Add new skill entry
                     candidate_skill = CandidateSkill(
-                        candidate_id=candidate_id,
+                        candidate_id=candidate.candidate_id,
                         skill_id=skill.skill_id,
                         proficiency=proficiency
                     )
                     db.session.add(candidate_skill)
         
         if profile_pic_file:
-            profile_pic_filename = f"profile_pics/{candidate_id}_{profile_pic_file.filename}"
+            profile_pic_filename = f"profile_pics/{user_id}_{profile_pic_file.filename}"
             profile_pic_path = os.path.join('app/static/uploads', profile_pic_filename)
             profile_pic_file.save(profile_pic_path)
             candidate.profile_picture = profile_pic_filename
@@ -332,21 +334,26 @@ def update_profile(candidate_id):
     except ValueError:
         return jsonify({'error': 'Please enter a valid number for years of experience.'}), 400
 
-@candidate_api_bp.route('/eligible-assessments/<int:candidate_id>', methods=['GET'])
-def get_eligible_assessments(candidate_id):
-    candidate = Candidate.query.get_or_404(candidate_id)
+@candidate_api_bp.route('/eligible-assessments/<int:user_id>', methods=['GET'])
+def get_eligible_assessments(user_id):
+    # Fetch candidate by user_id
+    candidate = Candidate.query.filter_by(user_id=user_id).first_or_404()
 
+    # Return empty list if profile is incomplete
     if not candidate.is_profile_complete:
         return jsonify([]), 200
 
+    # Fetch all job descriptions (assessments)
     assessments = JobDescription.query.all()
     eligible_assessments = []
 
     for assessment in assessments:
         # Check years of experience
-        experience_match = (assessment.experience_min <= candidate.years_of_experience <= assessment.experience_max)
+        experience_match = (
+            assessment.experience_min <= candidate.years_of_experience <= assessment.experience_max
+        )
 
-        # Check degree (case-insensitive match, allowing for None in required_degree)
+        # Check degree (case-insensitive match, allowing for None in degree_required)
         degree_match = False
         if assessment.degree_required and candidate.degree:
             degree_match = assessment.degree_required.lower() == candidate.degree.lower()
@@ -354,26 +361,78 @@ def get_eligible_assessments(candidate_id):
             degree_match = True  # No degree required, so candidate is eligible
 
         if experience_match and degree_match:
+            # Check if candidate is registered for this assessment
+            is_registered = AssessmentRegistration.query.filter_by(
+                candidate_id=candidate.candidate_id,
+                job_id=assessment.job_id
+            ).first() is not None
+
             eligible_assessments.append({
                 'job_id': assessment.job_id,
                 'job_title': assessment.job_title,
                 'company': assessment.company,
                 'experience_min': assessment.experience_min,
                 'experience_max': assessment.experience_max,
-                'required_degree': assessment.degree_required,
+                'degree_required': assessment.degree_required,
                 'schedule': assessment.schedule.isoformat() if assessment.schedule else None,
                 'duration': assessment.duration,
                 'num_questions': assessment.num_questions,
-                'description': assessment.description if hasattr(assessment, 'description') else None
+                'description': assessment.description if hasattr(assessment, 'description') else None,
+                'is_registered': is_registered
             })
 
     return jsonify(eligible_assessments), 200
 
-@candidate_api_bp.route('/start-assessment', methods=['POST'])
-def start_assessment():
+@candidate_api_bp.route('/register-assessment', methods=['POST'])
+def register_assessment():
     data = request.get_json()
     candidate_id = data.get('candidate_id')
     job_id = data.get('job_id')
+
+    if not candidate_id or not job_id:
+        return jsonify({'error': 'Missing candidate_id or job_id'}), 400
+
+    # Check if candidate exists
+    candidate = Candidate.query.filter_by(user_id = candidate_id).first_or_404()
+
+    # Check if job exists
+    job = JobDescription.query.get_or_404(job_id)
+
+    # Check if already registered
+    existing_registration = AssessmentRegistration.query.filter_by(
+        candidate_id=candidate.candidate_id,
+        job_id=job_id
+    ).first()
+    if existing_registration:
+        return jsonify({'error': 'Already registered for this assessment'}), 400
+
+    # Create new registration
+    registration = AssessmentRegistration(
+        candidate_id=candidate.candidate_id,
+        job_id=job_id,
+        registration_date=datetime.utcnow()
+    )
+    db.session.add(registration)
+    try:
+        db.session.commit()
+    except IntegrityError as e:
+        db.session.rollback()
+        return jsonify({'error': f'Failed to register: Invalid candidate_id or job_id ({str(e)})'}), 400
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'error': f'Failed to register: {str(e)}'}), 500
+
+    return jsonify({'message': 'Successfully registered for the assessment'}), 200
+
+
+@candidate_api_bp.route('/start-assessment', methods=['POST'])
+def start_assessment():
+    data = request.get_json()
+    user_id = data.get('user_id')
+    job_id = data.get('job_id')
+
+    candidate = Candidate.query.filter_by(user_id=user_id).first_or_404()
+    candidate_id = candidate.candidate_id
 
     if not candidate_id or not job_id:
         return jsonify({'error': 'Missing candidate_id or job_id'}), 400

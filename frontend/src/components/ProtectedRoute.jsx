@@ -8,10 +8,6 @@ const ProtectedRoute = ({ allowedRoles = [], redirectPath = '/' }) => {
     return <Navigate to={redirectPath} replace />
   }
 
-  if (allowedRoles.length > 0 && !allowedRoles.includes(user.role)) {
-    return <Navigate to="/not-authorized" replace />
-  }
-
   return <Outlet />
 }
 

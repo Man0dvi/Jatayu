@@ -8,11 +8,13 @@ import AuthRoute from './components/AuthRoute'
 import ProtectedRoute from './components/ProtectedRoute'
 import { useAuth } from './context/AuthContext'
 // import RecruiterDashboard from './pages/RecruiterDashboard'
-import RecruiterDashboard from './RecruiterDashboard';
-import CandidateDashboard from './CandidateDashboard';
-import CompleteProfile from './CompleteProfile';
-import AssessmentChatbot from './AssessmentChatbot';
-import CandidateRanking from './CandidateRanking';
+import RecruiterDashboard from './RecruiterDashboard'
+import CandidateDashboard from './CandidateDashboard'
+import CompleteProfile from './CompleteProfile'
+import AssessmentChatbot from './AssessmentChatbot'
+import CandidateRanking from './CandidateRanking'
+import PostAssessmentReport from './pages/PostAssessmentReport'
+import CombinedReport from './pages/CombinedReport'
 
 export default function App() {
   const { user } = useAuth()
@@ -27,21 +29,47 @@ export default function App() {
       <Route element={<AuthRoute />}>
         <Route path="/candidate/login" element={<CandidateLogin />} />
         <Route path="/candidate/signup" element={<CandidateSignup />} />
+      </Route>
+
+      <Route element={<AuthRoute redirectPath="/recruiter/dashboard" />}>
         <Route path="/recruiter/login" element={<RecruiterLogin />} />
       </Route>
 
-      <Route element={<ProtectedRoute allowedRoles={['candidate']} />}>
+      <Route
+        element={
+          <ProtectedRoute allowedRoles={['candidate']} redirectPath="/" />
+        }
+      >
         <Route path="/candidate/dashboard" element={<CandidateDashboard />} />
-        <Route path="/candidate/complete-profile" element={<CompleteProfile />} />
-        <Route path="/candidate/assessment/:attemptId" element={<AssessmentChatbot />} />
+        <Route
+          path="/candidate/complete-profile"
+          element={<CompleteProfile />}
+        />
+        <Route
+          path="/candidate/assessment/:attemptId"
+          element={<AssessmentChatbot />}
+        />
       </Route>
 
-      <Route element={<ProtectedRoute allowedRoles={['recruiter']} />}>
+      <Route
+        element={
+          <ProtectedRoute allowedRoles={['recruiter']} redirectPath="/" />
+        }
+      >
         <Route path="/recruiter/dashboard" element={<RecruiterDashboard />} />
-        <Route path="/recruiter/dashboard" element={<RecruiterDashboard />} />
-        <Route path="/recruiter/candidates/:jobId" element={<CandidateRanking />} />
+        <Route
+          path="/recruiter/candidates/:job_id"
+          element={<CandidateRanking />}
+        />
+        <Route
+          path="/recruiter/report/:job_id"
+          element={<PostAssessmentReport />}
+        />
+        <Route
+          path="/recruiter/combined-report/:job_id"
+          element={<CombinedReport />}
+        />
       </Route>
     </Routes>
   )
 }
-
